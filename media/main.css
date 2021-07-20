@@ -1,0 +1,710 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css');
+
+*{
+    font-family: 'Gilroy', 'Roboto', 'Segoe UI', sans-serif;
+    user-select: none;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.04);
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#data_test {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.warning {
+    background: #000;
+}
+
+.welcome {
+    background-color: #000000;
+    background-image: url('../media/pre_gradient.png');
+}
+
+.welcome video {
+    position: absolute;
+    top: 0;
+    left:0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+#version {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 11px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fff;
+    z-index: 999;
+    margin: 0;
+    opacity: 25%;
+}
+
+a {
+    color: white;
+}
+
+.warning_img {
+    position: absolute;
+    left: 200px;
+    opacity: 0%;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.warning .loading {
+    left: calc(200px - 36px);
+}
+
+.loading {
+    z-index: 9999999999999999999999999999;
+    position: absolute;
+    bottom: 36px;
+    left: 36px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 500;
+    opacity: 0%;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.loading lottie-player {
+    height: 48px;
+    margin-right: 12px;
+}
+
+.loading p {
+    filter: blur(0.05);
+}
+
+.welc_arrows {
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
+    right: -150px;
+    animation-duration: 3s;
+    top: 0;
+}
+
+.welc_letters {
+    position: absolute;
+    z-index: -2;
+    left: 0;
+}
+
+.welc_text {
+    position: absolute;
+    z-index: 2;
+    bottom: 70px;
+    visibility: hidden;
+}
+
+.song_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    background-size: cover;
+    background-position: center;
+}
+
+.app_blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: #00000055;
+    backdrop-filter: blur(8px);
+}
+
+.app_logo {
+    position: absolute;
+    width: 209.73px;
+    height: 48px;
+    left: 52px;
+    top: 45px;
+    pointer-events: none;
+}
+
+.app_right {
+    position: absolute;
+    right: 52px;
+    top: 49px;
+    display: flex;
+}
+
+.app_right #clock {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 40px;
+    text-align: right;
+    margin: 0;
+    color: #ffffff;
+}
+
+.app_right h4 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 40px;
+    text-align: right;
+    margin: 0;
+    color: #ffffff88;
+    margin-right: 24px;
+}
+
+.preview {
+    position: absolute;
+    left: 52px;
+    top: 139px;
+    display: flex;
+}
+
+.preview_video {
+    width: 990px;
+    height: 557px;
+    background: #000;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.preview_data {
+    position: absolute;
+    left: 1020px;
+    top: 0px;
+}
+
+.data_content {
+    margin: 0;
+    margin-bottom: 24px;
+    width: 350px;
+}
+
+.data_content h1 {
+    margin: 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 40px;
+    color: #FFFFFF;
+}
+
+.data_content h2 {
+    margin: 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    /* identical to box height */
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.pre_tuto {
+    position: absolute;
+    bottom:0;
+    left: 0;
+    width: 100vw;
+}
+
+#songs {
+    position: absolute;
+    left: 52px;
+    top: 742px;
+    display: flex;
+}
+
+.song {
+    width: 180px;
+    height: 180px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+    background-size: cover;
+    transition: 0.2s;
+	margin-right: 20px;
+}
+
+.coverbg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 180px;
+    background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(0, 0, 0, 0) 41.15%, rgba(0, 0, 0, 0.8) 100%);
+    border-radius: 10px;
+}
+
+.coverbg p {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 30px;
+    display: flex;
+    align-items: flex-end;
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    margin: 0;
+}
+
+.videoData {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    z-index: 999;
+}
+
+.videoData h3 {
+    margin: 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 45px;
+    display: flex;
+    align-items: flex-end;
+    color: #FFFFFF;
+}
+
+.videoData p {
+    margin: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+}
+
+#username {
+    transition: 0.3s;
+    opacity: 0%;
+}
+
+#notification {
+    z-index: 9999999999999999999999999;
+    position: absolute;
+    width: 675px;
+    height: calc(83px - 8px);
+    top: 32px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    padding-bottom: 8px;
+    margin-top: -120px;
+    transition: 0.4s cubic-bezier(0.000, 0.405, 0.160, 1.335);
+    display: flex;
+    align-items: center;
+}
+
+#notification h3 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    margin-left: 30px;
+}
+
+#not_outline {
+    position: absolute;
+    background: #19ACCC;
+    border-radius: 0px 0px 0px 5px;
+    width: 100%;
+    height: 6px;
+    bottom: 0;
+    transition: 4s cubic-bezier(0.250, 0.250, 0.750, 0.750);
+}
+
+.notransition {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
+
+#transition {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999999999999999999999999999999;
+    display: none;
+}
+
+#transition video {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#dance_screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999999999999999999999999999999999;
+    display: none;
+}
+
+#dance_screen video {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -99;
+}
+
+.rabbit-lyrics {
+    height: 115px !important;
+    overflow: hidden !important;
+    top: -30px !important;
+    transition: 0.3s cubic-bezier(1,.01,0,1.01);
+    left: 0;
+    position: absolute !important;
+}
+
+.rabbit-lyrics__line {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 40px;
+    color: rgba(255, 255, 255, 0.5);
+    text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.15);
+    filter: blur(1px);
+    margin-top: -5px;
+}
+
+.rabbit-lyrics__line--active {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF !important;
+    text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.15);
+    filter: blur(0px);
+}
+
+.lyrics {
+    position: absolute !important;
+    bottom: 10px !important;
+    left: 50px !important;
+    position: relative;
+    background: none;
+    padding: 10px;
+    border-radius: 0px;
+    height: 115px;
+    overflow: hidden;
+    border: none;
+    width: 900px;
+}
+
+.app_top {
+    position: absolute;
+    width: 100vw;
+    height: 120px;
+    left: 0px;
+    top: 0px;
+    z-index: 999999999;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.app_right {
+    flex-direction: column;
+    top: 32px;
+}
+
+#username {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 24px;
+    text-align: right;
+    margin-right: 0;
+    margin-top: -5px;
+    min-width: 100%;
+}
+
+#clock {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 32px;
+    margin-right: 0;
+    min-width: 100%;
+}
+
+.app_preview {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 595px;
+    z-index: 999;
+    background-color: #000;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    transition: 0.5s cubic-bezier(.87,.01,0,1.01);
+}
+
+.preview_coach {
+    width: 746px;
+    height: 595px;
+    background-size: cover;
+    background-position: center;
+    filter: drop-shadow(0px 0px 80px rgba(0, 0, 0, 0.5));
+    z-index: 999;
+    transition: 0.5s cubic-bezier(.87,.01,0,1.01);
+}
+
+.preview_video {
+    position: absolute;
+    width: 720px;
+    height: 420px;
+    left: 954px;
+    top: 88px;
+    background: url(image.png);
+    border: 2px solid #FFFFFF;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+    transition: 0.5s cubic-bezier(.87,.01,0,1.01);
+}
+
+.preview_data {
+    position: absolute;
+    left: auto;
+    right: 1200px;
+    top: 305px;
+    z-index: 9999;
+    transition: 0.5s cubic-bezier(.87,.01,0,1.01);
+}
+
+.preview_data * {
+    text-align: right;
+    margin: 0;
+}
+
+.preview_data h3 {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 59px;
+    letter-spacing: 0em;
+    text-align: right;
+    margin-right: 18px;
+}
+
+.preview_data p {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 39px;
+    letter-spacing: 0em;
+    text-align: right;
+    margin-right: 18px;
+}
+
+#bar {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 8px;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.score {
+    top: 430px;
+    opacity: 50%;
+}
+
+.score h3 {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 39px;
+    letter-spacing: 0em;
+    text-align: right;
+}
+
+.score p {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 45px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.app_select {
+    position: absolute;
+    bottom:0;
+    left: 0;
+    height: calc(100vh - 595px);
+    width: 100vw;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.app {
+    background-image: url('../media/pre_gradient.png');
+    background-size: cover;
+    display: none;
+}
+
+.app_caroussel {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    position: absolute;
+    left: 52px;
+    top: 36px;
+}
+
+.caroussel_choice {
+    margin-right: 36px;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-decoration: none;
+    opacity: 50%;
+}
+
+.caroussel_choice:hover {
+    opacity: 80%;
+}
+
+.car_selected {
+    font-weight: bold;
+    opacity: 100%;
+}
+
+#songs {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    position: absolute;
+    left: 51px;
+    top: 100px;
+}
+
+.song {
+    filter: none;
+    background-color: #ffffff33;
+    width: 240px;
+    height: 240px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 4px solid #FFFFFF00;
+}
+
+.song:hover {
+    border: 4px solid #FFFFFF55;
+}
+
+.song:focus {
+    border: 4px solid #FFFFFF;
+}
+
+.coverbg {
+    background-size: cover;
+    width: 240px;
+    height: 240px;
+}
+
+.coverbg p {
+    position: absolute;
+    bottom: 17px;
+    left: 25px;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 35px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+iframe {
+    border: none !important;
+}
+
+.fullscreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.big_coach {
+    z-index: 9999;
+    transition: 1s cubic-bezier(0,.01,0,1.01);
+    position: absolute;
+    left: 650px;
+    top: 130px;
+    opacity: 0%;
+    width: 820px;
+    height: 820px;
+    background-size: cover;
+}
+
+#dance_json {
+    position: absolute;
+    top:10px;
+    left:10px;
+    width: 500px;
+    height: 500px;
+    z-index: 999999999999999999999999999999999999999999;
+    font-family: monospace;
+    padding: 10px;
+    color: white;
+    background-color: #000;
+    opacity: 50%;
+}
